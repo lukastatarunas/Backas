@@ -1,4 +1,4 @@
 module.exports = {
-    url: 'mongodb+srv://lukas:mongo@db-ipxcl.mongodb.net/test?retryWrites=true&w=majority',
+    url: 'mongodb://admin:dtfVgHCQ5EGzxs4v@SG-DB-27632.servers.mongodirector.com:27017/admin',
     serverport: 5000
 }
