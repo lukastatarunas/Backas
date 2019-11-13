@@ -1,10 +1,12 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 const app = express()
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.use(cors())
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*")
@@ -15,7 +17,7 @@ app.use((req, res, next) => {
 
 const config = require('./config.js')
 const mongoose = require('mongoose')
-require('./worker.routes.js')(app)
+require('./milk.routes.js')(app)
 
 mongoose.Promise = global.Promise
 
